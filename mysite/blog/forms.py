@@ -1,6 +1,6 @@
-form django import form
+from django import forms
 
-class EmailPostForms(forms.Form):
+class EmailPostForm(forms.Form):
 	name = forms.CharField(max_length=25)
 	email = forms.EmailField()
 	to = forms.EmailField()
