@@ -60,6 +60,7 @@ def post_share(request, post_id):
 		if form.is_valid():
 			#Form fields passed validation
 			cd = form.cleaned_data
+			
 			#...send email
 			post_url = request.build_absolute_uri(post.get_absolute_url())
 			subject = '{} ({}) recommends you reading "{}"'.format(cd['name'], cd['email'], post.title)
